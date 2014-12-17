@@ -127,7 +127,7 @@
                         'plugin' => 'BoostCake',
                         'class' => $response['class']
                     ));
-        $this->redirect($response['redirect']);
+        $this->redirect($this->referer());
     }
     public function multiple_action($ids = null,$action =null,$type = null){
         $response = $this->Message->performAction($type, $ids, $action);
